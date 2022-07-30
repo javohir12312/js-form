@@ -10,7 +10,11 @@ elForm.addEventListener("submit", function (evt) {
 
   if (isNaN(speakMoney.value)) {
     elP.textContent = 'Son kiriting'
-  } else if(speakMoney.value >= money){
-    elP.textContent = `${speakName} Otdingiz`
+  } 
+  else if (speakMoney.value < money) {
+   elP.textContent = `Pulingiz yetmadi ${speakName.value}`
+  }
+  else if(speakMoney.value >= money){
+    elP.textContent = ` ${speakName.value} O'tdingiz`
   }
 })
